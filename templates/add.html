@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+<html>
+    <head>
+
+    </head>
+   
+
+{% block content %}
+<body>
+   <br> 
+
+   
+   <form action="/add" class="w-25" style="margin-left: 200px;" method="POST"> <br>
+
+    <label for="exampleInputEmail1">Name</label> <br>
+    <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="Name" name="name"><br>
+    <label for="exampleInputEmail1">Email</label> <br> 
+    <input type="email" class="form-control" id="exampleInputEmail1"  placeholder="Email" name="email"><br>
+    <label for="exampleInputEmail1">Password</label> <br>
+    <input type="password" class="form-control" id="exampleInputEmail1"  placeholder="Password" name="password">
+    <br>
+    <center>
+        <button type="submit" class="btn btn-outline-success">Add User</button>
+    </center>
+    
+    {{ msg }}
+</form>
+
+</body>
+{% endblock %}
+</html>

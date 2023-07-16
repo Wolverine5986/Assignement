@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+
+<html>
+    <head>
+
+    </head>
+   
+
+{% block content %}
+<body>
+   <br>
+    <form action="/update/{{user._id}}" class="w-25" style="margin-left: 200px;" method="POST"> <br>
+    <label for="exampleInputEmail1">Name</label> <br>
+    <input type="text" class="form-control" value="{{user.name}}" placeholder="Name" name="name"><br>
+    <label for="exampleInputEmail1">Email</label> <br> 
+    <input type="email" class="form-control"  value="{{user.email}}" placeholder="Email" name="email"><br>
+    <label for="exampleInputEmail1" >Password</label> <br>
+    <input type="text" class="form-control" value="{{user.password}}"  placeholder="Password" name="password">
+    <br>
+    <center>
+        <button type="submit" class="btn btn-outline-success">Update</button>
+    </center>
+    
+    {{ msg }}
+</form>
+    
+</body>
+{% endblock %}
+</html>

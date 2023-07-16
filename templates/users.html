@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+<html>
+    <head>
+
+    </head>
+   
+
+{% block content %}
+<br>
+<body>
+    <table class="table table-bordered w-75 " style="margin-left: 150px;">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">email</th>
+            <th scope="col">Password</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        {% for i in result %}
+        <tbody>
+          <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.password}}</td>
+            <td><a type="button" class="btn btn-outline-success" href="/update/{{i._id}}">Update</a></td>
+            <td><a class="btn btn-outline-danger" href="/delete/{{i._id}}">Delete</a></td>
+          </tr>
+          <tr>
+
+          
+        </tbody>
+        {% endfor %}
+        {{ msg }}
+      </table>
+</body> 
+{% endblock %}
+</html>
